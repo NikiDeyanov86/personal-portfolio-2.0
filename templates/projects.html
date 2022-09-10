@@ -11,46 +11,56 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
     />
     <script src="/static/js/bootstrap.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </head>
 <body class="projects">  
-    
+    <script>
+        $(document).ready(function() {
+            $('.tm-nav-item').removeClass('active');
+            $('#projects').addClass('active');
+        })
+    </script>
     <div class="tm-main-container">
       <div class="tm-top-container">
         <!-- Menu -->
         <nav class="tm-nav">
       
           <ul class="tm-nav-links">
-            <li class="tm-nav-item">
+            <li class="tm-nav-item active" id="about-me">
               <a href="/" data-align="right" class="tm-nav-link">About me</a>
             </li>
-            <li class="tm-nav-item active">
+            <li class="tm-nav-item" id="projects">
               <a href="/projects" data-align="right" class="tm-nav-link">Projects</a>
             </li>
-            <li class="tm-nav-item">
+            <li class="tm-nav-item" id="technologies">
               <a href="/technologies" data-align="middle"class="tm-nav-link">Technologies</a>
             </li>
-          
+
           </ul>
         </nav>
 
         <!-- Personal info -->
-          <div class="container personal tm-bg-dark">
-            <div class="row">
-              <div class="col">
+          <div class="d-flex flex-column">
+              <div class="container personal tm-bg-dark">
+                <div class="row">
+                  <div class="col">
                     <img src="/static/images/profile-photo.jpg" class="rounded-circle" alt="Profile image" width="200" height="200">
+                  </div>
+                  <div class="col align-self-center" style="margin-right: 10px;">
+                    <div class="row name">Nikolay</div>
+                    <div class="row name">Deyanov</div>
+                  </div>
+                </div>
               </div>
-              <div class="col align-self-center" style="margin-right: 10px;">
-                <div class="row name">Nikolay</div>
-                <div class="row name">Deyanov</div>
+              <div class="container tm-bg-dark job-description">
+                <h3>Junior embedded developer</h3>
               </div>
-            </div>
-          </div>  
+          </div>
       </div>
-      
 
       <div class="container-fluid" id="main">
         <div class="d-flex justify-content-between">
+            <div class="d-flex flex-column justify-content-end">
                 <div class="contact">
                     <div class="contact-box">
                             <a href="https://www.instagram.com/endeyy__/" class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="orange" class="bi bi-instagram" viewBox="0 0 16 16">
@@ -70,7 +80,8 @@
                             </svg></a><p> deyanov.nikolay@gmail.com </p>
                     </div>
                   </div>
-          <div class="">
+                </div>
+          <div>
             <!-- Site content -->
             <div class="tm-content">
               <!-- Section -->
@@ -80,12 +91,21 @@
                 </h2>
                 <div class="tm-textbox tm-bg-dark">
                   <p>
-                    I've done a lot of small and medium sized school projects, but the most notable are a web magazine and a battlebot.
-                    The github repos of which you can find in my github, see the bottom-left corner.
+                    Throughout the years I have done a lot of projects with very different technologies and languages
+                      (which can be seen in my GitHub profile). But my biggest one was my graduation project, the
+                      so called "Pet Surveillance System".
                   </p>
-                  <p class="mb-0">
-                    I like doing sports in general, but I do prefer mountain sports like ski, hiking and downhill biking.
+                  <p>
+                    It is basically an embedded system based on the Raspberry Pi 4 and Python Flask. The system is
+                      placed on a 4X4 driven car-like robot platform and enables a pet owner to remotely watch and
+                      entertain his pet through a web app when it is home alone. The system also has the ability to
+                      follow the pet using an object tracking algorithm.
                   </p>
+                    <p class="mb-0">
+                        More information about this project you can find
+                        <a href="https://github.com/NikiDeyanov86/PetSurveilanceSystem" style="text-decoration: none;
+                        color: white; font-weight: bold";>here</a>
+                    </p>
                 </div>
 
               </section>
